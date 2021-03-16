@@ -128,6 +128,17 @@ namespace Sistema_Biblioteca
                         arquivo.SalvarEmprestimo(emprestimo);
                         break;
                     case "4":
+                        Console.Write("Digite o ID do Cliente: ");
+                        long idbusca = long.Parse(Console.ReadLine());
+                        Console.WriteLine("Digite o Tombo do livro: ");
+                        long tombobusca = long.Parse(Console.ReadLine());
+                        int statusatt = 2;
+                        if (arquivo.ProcuraEmprestimo(idbusca, tombobusca))
+                        {
+                            Console.Write("Alterando status de emprestimo!");
+                            emprestimo.StatusEmprestimo = statusatt;
+                            arquivo.SalvarEmprestimo(emprestimo);
+                        };
                         break;
                     case "5":
                         break;

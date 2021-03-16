@@ -51,6 +51,23 @@ namespace Sistema_Biblioteca
             }
             return false;
         }
+        public bool ProcuraEmprestimo(long idbusca, long tombobusca)
+        {
+            string[] lines = File.ReadAllLines(PathEmprestimo);
+            if (lines.Length > 1)
+            {
+                for (int i = 1; i < lines.Length; i++)
+                {
+                    string line = lines[i];
+                    string[] emprestimoCSV = line.Split(';');
+                    if (long.Parse(emprestimoCSV[0]) == idbusca && long.Parse(emprestimoCSV[1]) == tombobusca)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
 
         public Cliente LeituraCliente(string cpf, long id)
         {
@@ -143,15 +160,18 @@ namespace Sistema_Biblioteca
             {
                 string line = lines[i];
                 string[] emprestimoCSV = line.Split(';');
-                
+                if (idCliente == long.Parse(emprestimoCSV[0]) && tomboemprestimo == long.Parse(emprestimoCSV[1]))
+                {
                     Emprestimo emprestimo = new Emprestimo
                     {
-                        IdCliente = long.Parse(emprestimoCSV[0]),
-                        NumeroTombo = long.Parse(emprestimoCSV[1]),
+                        IdCliente = idCliente,
+                        NumeroTombo = tomboemprestimo,
                         DataEmprestimo = DateTime.ParseExact(emprestimoCSV[2], "dd/MM/yyyy", CultureInfo.InvariantCulture),
                         DataDevolucao = DateTime.ParseExact(emprestimoCSV[3], "dd/MM/yyyy", CultureInfo.InvariantCulture),
                         StatusEmprestimo = int.Parse(emprestimoCSV[4])
                     };
+                }
+                    
             }
             return null;
         }
