@@ -1,0 +1,7 @@
+C:\Users\erics\source\repos\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe.config
+C:\Users\erics\source\repos\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe
+C:\Users\erics\source\repos\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.pdb
+C:\Users\erics\source\repos\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csprojAssemblyReference.cache
+C:\Users\erics\source\repos\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\erics\source\repos\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.exe
+C:\Users\erics\source\repos\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.pdb
