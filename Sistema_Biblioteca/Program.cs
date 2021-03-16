@@ -27,6 +27,18 @@ namespace Sistema_Biblioteca
                 Directory.CreateDirectory(arquivo.DirectoryPath);
       
             }
+            if (!File.Exists(arquivo.PathCliente))
+            {
+                FileStream sw = File.Create(arquivo.PathCliente);
+            }
+            if (!File.Exists(arquivo.PathLivro))
+            {
+                FileStream sw = File.Create(arquivo.PathEmprestimo);
+            }
+            if (!File.Exists(arquivo.PathEmprestimo))
+            {
+                FileStream sw = File.Create(arquivo.PathEmprestimo);
+            }
             if (!File.Exists(arquivo.PathIdCliente))
             {
                 FileStream sw = File.Create(arquivo.PathIdCliente);
