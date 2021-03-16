@@ -33,7 +33,7 @@ namespace Sistema_Biblioteca
             }
             if (!File.Exists(arquivo.PathLivro))
             {
-                FileStream sw = File.Create(arquivo.PathEmprestimo);
+                FileStream sw = File.Create(arquivo.PathLivro);
             }
             if (!File.Exists(arquivo.PathEmprestimo))
             {
